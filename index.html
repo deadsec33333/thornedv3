@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Throned · Crypto Casino</title>
+<meta name="description" content="Throned crypto casino lobby preview.">
+<meta name="theme-color" content="#080C14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 8l4.5 4 4-7 4 7 4.5-4-2 10.5h-13z' fill='%234FA3FF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HERO + HEADER ================= -->
+<section class="hero">
+  <img class="hero-art" src="assets/mascots.webp" alt="Throned cat and raccoon mascots on a pile of crystals">
+  <div class="hero-fade"></div>
+
+  <header class="topbar wrap">
+    <a href="#" class="logo"><img src="assets/logo.png" alt="Throned"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#" class="active">Lobby</a>
+      <a href="#originals">Originals</a>
+      <a href="#slots">Slots</a>
+      <a href="#">Live casino</a>
+      <a href="#">Promotions</a>
+      <a href="#">VIP</a>
+    </nav>
+    <div class="spacer"></div>
+    <button class="icon-btn" aria-label="Search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+    </button>
+    <div class="balance">
+      <span class="amount"><span class="coin-dot">₮</span><span id="balance">1,284.50</span></span>
+      <button class="btn-wallet">Wallet</button>
+    </div>
+    <span class="avatar">MQ</span>
+  </header>
+
+  <div class="hero-copy wrap">
+    <span class="eyebrow">Welcome offer</span>
+    <h1 class="h">Double your first deposit.</h1>
+    <p>100% bonus up to $1,000. Then up to 30% rakeback on every bet as you climb the VIP ranks.</p>
+    <div class="hero-ctas">
+      <a href="#" class="btn btn-white">Deposit and claim</a>
+      <a href="#" class="btn btn-glass">All promotions</a>
+    </div>
+  </div>
+</section>
+
+<main class="wrap stack">
+
+  <!-- Stat strip -->
+  <div class="stats">
+    <div><div class="h stat">[X] min</div><div class="muted">Average crypto withdrawal</div></div>
+    <div><div class="h stat">1% edge</div><div class="muted">On every Throned Original</div></div>
+    <div><div class="h stat">Up to 30%</div><div class="muted">Rakeback, paid as cash</div></div>
+    <div><div class="h stat gold" id="race-pool">$25,000</div><div class="muted">Weekly race, ends in <span class="race-left">3d 14h</span></div></div>
+  </div>
+
+  <!-- Bento -->
+  <div class="bento">
+    <div class="card">
+      <div class="card-head"><span>VIP progress</span><a href="#">Benefits</a></div>
+      <div class="vip">
+        <div class="ring">
+          <svg width="100" height="100" viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="56" fill="none" stroke="#1A2333" stroke-width="12"/><circle class="ring-bar" cx="66" cy="66" r="56" fill="none" stroke="#5CC8FF" stroke-width="12" stroke-linecap="round" stroke-dasharray="0 352" transform="rotate(-90 66 66)"/></svg>
+          <span class="h">51%</span>
+        </div>
+        <div class="vip-text"><span class="h">Platinum III</span><span class="muted">7% rakeback</span><span class="muted">Next: Platinum II</span></div>
+      </div>
+      <div class="tiny">$512,345 of $1,000,000 wagered</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span>Jump back in</span><a href="#">History</a></div>
+      <div class="recent">
+        <a href="#"><img src="assets/dice.jpg" alt="Dice"><span>2 min ago</span></a>
+        <a href="#"><img src="assets/slot-wanteddeadorawild.jpg" alt="Wanted Dead or a Wild"><span>1 h ago</span></a>
+        <a href="#"><img src="assets/mines.jpg" alt="Mines"><span>Yesterday</span></a>
+      </div>
+    </div>
+
+    <div class="card card-green">
+      <div class="card-head"><span>Rakeback</span><span class="green small" id="rb-ready">2 ready</span></div>
+      <div class="h big" id="rb-amount">$15.71</div>
+      <div class="rows">
+        <div><span class="muted">Instant</span><span id="rb-i">$3.21</span></div>
+        <div><span class="muted">Daily</span><span id="rb-d">$12.50</span></div>
+      </div>
+      <button class="btn-claim" id="claim">Claim $15.71</button>
+    </div>
+
+    <div class="card card-gold">
+      <div class="card-head"><span>Weekly race</span><span class="small tan" id="race-timer">3d 14h 22m</span></div>
+      <div class="h big gold">$25,000</div>
+      <div class="rows">
+        <div><span><b class="gold">1</b>&nbsp;&nbsp;whale***</span><span class="green b">$8,000</span></div>
+        <div><span><b class="silver">2</b>&nbsp;&nbsp;kirby***</span><span class="green b">$5,000</span></div>
+      </div>
+      <div class="you"><span><b class="sky">#128</b> You</span><span class="muted">$4,210 to top 50</span></div>
+    </div>
+  </div>
+
+  <!-- Originals -->
+  <section class="card originals" id="originals">
+    <div class="sec-head">
+      <div><div class="h sec-title">Throned Originals</div><div class="muted">Built in house. Every round verifiable.</div></div>
+      <a href="#">See all 9</a>
+    </div>
+    <div class="og-row">
+      <a href="#" class="coinflip">
+        <svg class="cf-art" viewBox="0 0 520 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <radialGradient id="cfFace" cx="36%" cy="30%" r="80%"><stop offset="0" stop-color="#FFF6C4"/><stop offset=".4" stop-color="#FFD54A"/><stop offset=".8" stop-color="#F0A800"/><stop offset="1" stop-color="#C98200"/></radialGradient>
+            <linearGradient id="cfEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D99000"/><stop offset="1" stop-color="#8A5400"/></linearGradient>
+            <radialGradient id="cfGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFD54A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD54A" stop-opacity="0"/></radialGradient>
+            <linearGradient id="cfShine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+            <clipPath id="cfClip"><circle cx="0" cy="0" r="92"/></clipPath>
+          </defs>
+          <g class="cf-rays" opacity=".18"><g transform="translate(372 132)" id="rays"></g></g>
+          <circle cx="372" cy="132" r="160" fill="url(#cfGlow)"/>
+          <g transform="translate(486 250)">
+            <ellipse cx="0" cy="22" rx="46" ry="14" fill="#8A5400"/><rect x="-46" y="0" width="92" height="22" fill="url(#cfEdge)"/><ellipse cx="0" cy="0" rx="46" ry="14" fill="url(#cfFace)"/>
+            <ellipse cx="4" cy="-14" rx="46" ry="14" fill="#A86800"/><rect x="-42" y="-36" width="92" height="22" fill="url(#cfEdge)"/><ellipse cx="4" cy="-36" rx="46" ry="14" fill="url(#cfFace)"/>
+          </g>
+          <g transform="translate(236 168) rotate(-20)"><g class="cf-float">
+            <circle cx="3" cy="5" r="24" fill="url(#cfEdge)"/><circle cx="0" cy="0" r="24" fill="url(#cfFace)"/><circle cx="0" cy="0" r="17" fill="none" stroke="#D99000" stroke-width="2.5"/>
+          </g></g>
+          <g transform="translate(372 132) scale(1.12)">
+            <ellipse cx="0" cy="118" rx="74" ry="12" fill="#0E0630" opacity=".45"/>
+            <g class="cf-coin" id="coin">
+              <circle cx="0" cy="10" r="92" fill="url(#cfEdge)"/>
+              <circle cx="0" cy="0" r="92" fill="url(#cfFace)"/>
+              <circle cx="0" cy="0" r="74" fill="none" stroke="#D99000" stroke-width="5"/>
+              <circle cx="0" cy="0" r="82" fill="none" stroke="#FFF1B0" stroke-width="2" stroke-dasharray="3 7" opacity=".8"/>
+              <g class="face-heads">
+                <path d="M-44 22 L-48 -18 L-23 4 L0 -36 L23 4 L48 -18 L44 22 Z" fill="#C98200"/>
+                <path d="M-44 22 L-48 -18 L-23 4 L0 -36 L23 4 L48 -18 L44 22 Z" fill="#E8A600" transform="translate(-2 -3)"/>
+                <rect x="-44" y="27" width="88" height="12" rx="4" fill="#C98200"/>
+                <circle cx="0" cy="-40" r="6" fill="#E8A600"/><circle cx="-48" cy="-22" r="5" fill="#E8A600"/><circle cx="48" cy="-22" r="5" fill="#E8A600"/>
+              </g>
+              <g clip-path="url(#cfClip)"><rect class="cf-shine" x="-60" y="-110" width="40" height="220" fill="url(#cfShine)" transform="rotate(20)"/></g>
+            </g>
+          </g>
+          <path class="tw" d="M470 54 l6 15 15 6 -15 6 -6 15 -6 -15 -15 -6 15 -6z" fill="#fff"/>
+          <path class="tw tw2" d="M228 196 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#FFE9A8"/>
+          <path class="tw tw3" d="M498 156 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#fff"/>
+        </svg>
+        <div class="cf-top">
+          <div class="chips"><span class="chip-new">NEW</span><span class="chip-glass">Double or nothing · 1.98×</span></div>
+          <div class="h cf-title">COIN<br>FLIP</div>
+        </div>
+        <div class="cf-panel">
+          <div><div class="cf-cta">Try the coin flip challenge</div><div class="cf-sub"><span class="dot"></span><span id="cf-players">1,204</span> playing now</div></div>
+          <span class="btn-play">Play</span>
+        </div>
+      </a>
+      <a href="#" class="og-tile"><img src="assets/dice.jpg" alt="Dice"></a>
+      <a href="#" class="og-tile"><img src="assets/mines.jpg" alt="Mines"></a>
+      <a href="#" class="og-tile"><img src="assets/crash.jpg" alt="Crash"></a>
+      <a href="#" class="og-more">
+        <img src="assets/more-games.webp" alt="Limbo, Keno, Wheel, HiLo and Blackjack">
+        <div class="og-more-fade"></div>
+        <div class="og-more-label"><div><b>See all</b><span class="muted">5 more games</span></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B1A33" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Slots + Live wins -->
+  <div class="split" id="slots">
+    <section class="card">
+      <div class="sec-head"><div class="h sec-title sm">Trending slots</div><a href="#">View all</a></div>
+      <div class="slots">
+        <a href="#"><img src="assets/slot-wanteddeadorawild.jpg" alt="Wanted Dead or a Wild"></a>
+        <a href="#"><img src="assets/slot-lebandit.jpg" alt="Le Bandit"></a>
+        <a href="#"><img src="assets/slot-chaoscrew.jpg" alt="Chaos Crew"></a>
+        <a href="#"><img src="assets/slot-ripcity.jpg" alt="RIP City"></a>
+        <a href="#"><img src="assets/slot-zezeus.jpg" alt="Ze Zeus"></a>
+      </div>
+    </section>
+    <section class="card">
+      <div class="sec-head"><div class="h sec-title sm">Live wins</div><span class="live"><span class="dot pulse"></span>Live</span></div>
+      <div class="feed" id="feed"></div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <img src="assets/logo.png" alt="Throned">
+    <span>© 2026 Throned · 18+ · Play responsibly</span>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
